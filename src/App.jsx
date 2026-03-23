@@ -58,6 +58,8 @@ const ui = {
     intro: "This tool allows you to complete the Introspective Predictive Processing Inventory (IPPI) and receive a summary of your scores compared to the autistic and non-autistic reference samples from the validation study.",
     disclaimerHead: "Important notice",
     disclaimerBody: "The IPPI measures introspective experiences theoretically linked to predictive processing differences. A high score should not be interpreted as confirming predictive processing differences at a mechanistic level, nor as a diagnostic indicator of autism. This tool is for research and educational purposes only. If you have concerns about your mental health, please consult a qualified professional.",
+    privacyHead: "Privacy notice",
+    privacyBody: "This tool runs entirely in your browser. No data you enter is transmitted, stored, or recorded anywhere.",
     citationPrefix: "Preprint: Roos, M., Storm, H., Zimmer, L., & Schuwerk, T. (2025). Participatory Development and Psychometric Evaluation of the Introspective Predictive Processing Inventory (IPPI).",
     citationUrl: "https://osf.io/preprints/psyarxiv/yh7jq_v2",
     citationUrlLabel: "psyarxiv.com/yh7jq",
@@ -89,6 +91,8 @@ const ui = {
     intro: "Dieses Tool erm\u00f6glicht es Ihnen, das Introspektive Predictive Processing Inventar (IPPI) auszuf\u00fcllen und eine \u00dcbersicht Ihrer Punktzahlen im Vergleich zu den autistischen und nicht-autistischen Referenzstichproben der Validierungsstudie zu erhalten.",
     disclaimerHead: "Wichtiger Hinweis",
     disclaimerBody: "Das IPPI misst introspektive Erfahrungen, die theoretisch mit Unterschieden in der Predictive Processing verbunden sind. Ein hoher Wert sollte nicht als Best\u00e4tigung von Predictive-Processing-Unterschieden auf mechanistischer Ebene oder als diagnostischer Hinweis auf Autismus interpretiert werden. Dieses Tool dient ausschlie\u00dflich zu Forschungs- und Bildungszwecken. Bei Bedenken hinsichtlich Ihrer psychischen Gesundheit wenden Sie sich bitte an eine Fachkraft.",
+    privacyHead: "Datenschutzhinweis",
+    privacyBody: "Dieses Tool läuft vollständig in Ihrem Browser. Keine der eingegebenen Daten werden übermittelt, gespeichert oder aufgezeichnet.",
     citationPrefix: "Preprint: Roos, M., Storm, H., Zimmer, L., & Schuwerk, T. (2025). Participatory Development and Psychometric Evaluation of the Introspective Predictive Processing Inventory (IPPI).",
     citationUrl: "https://osf.io/preprints/psyarxiv/yh7jq_v2",
     citationUrlLabel: "psyarxiv.com/yh7jq",
@@ -265,6 +269,11 @@ export default function App() {
               <div style={{ background: "#FFF8F2", border: `1px solid #F5DCC8`, borderRadius: 12, padding: "1.25rem 1.5rem", marginBottom: "1.25rem" }}>
                 <div style={{ fontSize: "0.7rem", fontWeight: 700, color: "#B85C20", textTransform: "uppercase", letterSpacing: "0.09em", marginBottom: 6 }}>{t.disclaimerHead}</div>
                 <p style={{ fontSize: "0.86rem", lineHeight: 1.7, color: "#444" }}>{t.disclaimerBody}</p>
+              </div>
+
+              <div style={{ background: "#F0F7F0", border: "1px solid #C8DEB8", borderRadius: 12, padding: "1rem 1.5rem", marginBottom: "1.25rem" }}>
+                <div style={{ fontSize: "0.7rem", fontWeight: 700, color: "#3A6B3A", textTransform: "uppercase", letterSpacing: "0.09em", marginBottom: 6 }}>{t.privacyHead}</div>
+                <p style={{ fontSize: "0.86rem", lineHeight: 1.7, color: "#444" }}>{t.privacyBody}</p>
               </div>
 
               <div style={{ background: C.warm, borderRadius: 10, padding: "0.9rem 1.2rem", fontSize: "0.78rem", color: "#555", lineHeight: 1.65, fontStyle: "italic", marginBottom: "1.75rem" }}>
