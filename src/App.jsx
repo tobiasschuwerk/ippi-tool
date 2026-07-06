@@ -64,6 +64,8 @@ const ui = {
     citationUrl: "https://osf.io/preprints/psyarxiv/yh7jq_v2",
     citationUrlLabel: "psyarxiv.com/yh7jq",
     start: "Begin questionnaire",
+    instructionTitle: "Please read the following statements carefully and mark how typical the respective statement is for you or to what extent the statements apply to you.",
+    instructionBody: "Please be as conscientious and honest as possible. If you do not understand a statement or are unsure, nevertheless please try to answer it as honestly as possible. There are no right or wrong answers, it's all about your personal feeling.",
     scaleL: "Do not agree at all / very atypical for me",
     scaleR: "Agree very strongly / very typical for me",
     submit: "View my results",
@@ -97,6 +99,8 @@ const ui = {
     citationUrl: "https://osf.io/preprints/psyarxiv/yh7jq_v2",
     citationUrlLabel: "psyarxiv.com/yh7jq",
     start: "Fragebogen beginnen",
+    instructionTitle: "Bitte lesen Sie sich die folgenden Statements aufmerksam durch und markieren Sie, wie typisch die jeweilige Aussage für Sie ist bzw. in welchem Ausmaß die Statements auf Sie zutreffen.",
+    instructionBody: "Seien Sie dabei bitte so gewissenhaft und ehrlich wie möglich. Falls Sie eine Aussage nicht verstehen oder sich unsicher sind, versuchen Sie bitte trotzdem, sie so ehrlich wie möglich zu beantworten. Es gibt keine richtigen oder falschen Antworten, es geht einzig und allein um Ihr persönliches Empfinden.",
     scaleL: "Stimme \u00fcberhaupt nicht zu / sehr untypisch f\u00fcr mich",
     scaleR: "Stimme sehr stark zu / sehr typisch f\u00fcr mich",
     submit: "Ergebnisse anzeigen",
@@ -294,6 +298,11 @@ export default function App() {
           {/* Questionnaire */}
           {view === "questionnaire" && (
             <div>
+              <div style={{ background: C.white, borderRadius: 12, padding: "1.5rem", marginBottom: "1.5rem", boxShadow: "0 2px 14px rgba(0,0,0,0.05)" }}>
+                <p style={{ fontSize: "0.97rem", lineHeight: 1.65, color: C.ink, fontWeight: 600, marginBottom: "0.75rem" }}>{t.instructionTitle}</p>
+                <p style={{ fontSize: "0.86rem", lineHeight: 1.7, color: "#555" }}>{t.instructionBody}</p>
+              </div>
+
               <div style={{ marginBottom: "1.75rem" }}>
                 <div style={{ height: 4, background: C.warm, borderRadius: 2, overflow: "hidden", marginBottom: 6 }}>
                   <div style={{ height: "100%", width: `${(answered / 18) * 100}%`, background: C.navy, borderRadius: 2, transition: "width 0.3s ease" }} />
